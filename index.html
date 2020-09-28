@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JVectorMap - Perú</title>
+  <link rel="stylesheet" href="css/jquery-jvectormap-2.0.5.css">
+</head>
+
+<body>
+
+  <div id="world-map" style="width: 600px; height: 400px"></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-jvectormap-2.0.5.min.js"></script>
+  <script src="js/jquery-vectormap.peru.js"></script>
+
+  <script>
+
+    $('#world-map').vectorMap({
+      map: 'peru',
+      hoverColor: false,
+      hoverOpacity: 0.5,
+      onRegionClick: function (e, code) {
+        alert(code);
+      },
+      regionStyle: {
+        initial: {
+          fill: '#128da7'
+        },
+        hover: {
+          fill: "#A0D1DC"
+        }
+      }
+    });
+
+  </script>
+</body>
+
+</html>
